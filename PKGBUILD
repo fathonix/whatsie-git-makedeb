@@ -1,14 +1,14 @@
-# Maintainer: robertfoster
+# Maintainer: Aldo Adirajasa Fathoni <aldo.alfathoni@gmail.com>
 
 pkgname=whatsie-git
-pkgver=4.14.2.r0.gc478a7d
+pkgver=4.14.2.r1.g3092158
 pkgrel=1
 pkgdesc="Fast Light weight WhatsApp Client based on Qt's WebEngine, With lots of settings and packed goodies"
-arch=('armv6h' 'armv7h' 'arm' 'aarch64' 'i686' 'x86_64')
+arch=('armel' 'armhf' 'arm64' 'i386' 'amd64')
 url="https://github.com/keshavbhatt/whatsie"
 license=('MIT')
-depends=('qt5-base' 'qt5-declarative' 'qt5-location' 'qt5-webchannel' 'qt5-webengine')
-makedepends=('git' 'qt5-base')
+depends=('libqt5widgets5' 'libqt5quickwidgets5' 'libqt5location5' 'libqt5webchannel5' 'libqt5webengine5')
+makedepends=('git' 'qtbase5-dev' 'qtdeclarative5-dev' 'qtlocation5-dev' 'libqt5webchannel5-dev' 'qtwebengine5-dev' 'qtwebengine5-dev-tools')
 conflicts=("${pkgname%-git}")
 provides=("${pkgname%-git}")
 source=("${pkgname%-git}::git+${url}")
